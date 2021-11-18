@@ -1,0 +1,134 @@
+body{
+    background: white;
+    box-sizing: border-box;
+    margin: auto;
+    padding: auto;
+}
+img{
+    width: 100%;
+}
+h1{
+    margin: 1px;
+    font-size: 5.5vw;
+    color: blue;
+}
+p{
+    margin: 1px;
+    font-size: 4.2vw;   
+}
+
+button{
+    background: orangered;
+    border: none;
+    padding: 5px;
+    color: white;
+    font-weight: bold;
+}
+header{
+    background-image: url('../images/back.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+    align-items: center;
+    align-content: center;
+    
+}
+
+.name{
+    background: gray;
+    display: flex;
+    height: 50px;
+}
+.name div{
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+}
+.name div img{
+    width: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+.name h1{
+    color: rgb(5, 3, 95);
+    font-size: 9vw;
+    padding: 0px;
+    margin: 0px;
+}
+.name h1 span{
+    color: red;
+}
+
+.colon-3{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+.colon-3 div{
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 200px;
+    min-width: 77px;
+    height: 100px;
+    margin: 3px;
+    box-shadow: 0px 0px 3px 1px blue;
+}
+
+.colon-3 div img{
+    width: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+.colon-3 p,img{
+    padding: 1px;
+    margin: 1px;
+}
+.colon-3 img{
+    font-weight: bold;
+    color: red;
+    padding: 1px;
+    margin: 0px;
+}
+.colon-3 .a span{
+    font-weight: bold;
+    color: red;
+    padding: 1px;
+    margin: 1px;
+}
+.colon-3 .b{
+    color: red;
+    padding: 1px;
+    margin: 0px;
+}
+
+.text{
+   background: rgba(1, 1, 48, 0.397);
+   padding: 10px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+}
+
+.colon-2{
+    display: flex;
+    height: 100%;
+}
+.colon-2 .d{
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    width: 100px;
+    min-width: 70px;
+    height: 100%;
+    margin: 3px;
+    box-shadow: 0px 0px 3px 1px blue;
+}
+
+.colon-2 .e{
+    padding: 1px 5px 1px 5px;
+}
+
+.colon-2 .d{
+    padding: 1px 5px 1px 5px;
+    box-shadow: none;
+}
