@@ -3,14 +3,16 @@ body{
     padding: 0px;
     box-sizing: border-box;
     background: white;
+    overflow: hidden;
 }
 img{
     width: 100%;
 }
-header{
-    height: 150px;
+.header{
+    background: blue;
+    height: 200px;
     width: 100%;
-    background-image: url('https://firebasestorage.googleapis.com/v0/b/signup-286f7.appspot.com/o/banner3.jpg?alt=media&token=6f42e8c3-ec14-45ce-bd95-75c0fd086572');
+   
     background-size: cover;
     margin-bottom: 5px;
 }
@@ -57,9 +59,12 @@ header{
 }
 
 .colon-2{
-    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 98%;
     display: flex;
     box-shadow: 0px 0px 2px 1px blue;
+    border: 1px solid red;
 }
 .colon-2 .d{
     width: 120px;
@@ -86,7 +91,11 @@ main{
     display: none;
 }
 
-
+@media only screen and (min-width: 801px){
+   main{
+       display: none;
+   }
+}
 
 @media only screen and (max-width: 800px) {
     main{
