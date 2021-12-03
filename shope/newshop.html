@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scroll CSS Slider</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: white;
+}
+h1 {
+    font-size: 5vw;
+    text-transform: uppercase;
+    margin: 15px 0;
+    text-align: center;
+}
+main{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.horizontal_slider {
+    display: block;
+    width: 100%;
+    overflow-x: scroll;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #eee;
+}
+
+/*this is for chrome / firefox/ opera and safari*/
+.horizontal_slider::-webkit-scrollbar {
+    display: none;
+}
+
+/* for ms*/
+.horizontal_slider {
+    -ms-overflow-style: none;
+}
+
+.slider_container {
+    display: block;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.item {
+    display: inline-block;
+    margin-right: 10px;
+    border: 1px solid blue;
+    border-radius: 10px;
+}
+
+.item img {
+    width: 150px;
+    height: 170px;
+    object-fit: cover;
+}
+a{
+    text-decoration: none;
+}
+.bar{
+    background-color: blue;
+    height: 100px;
+  }
+  .bar h1{
+    color: white;
+    font-size: 28px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 2px;
+    margin-top: 0px;
+    padding-top: 5px;
+  }
+  .search-bar {
+    align-items: center;
+    border: 1px solid;
+    width: 80%;
+    height: 33px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin: auto;
+    padding: 5px;
+}
+.search-bar input{
+  width: 98%;
+  height: 25px;
+  outline: white;
+  border: 0px;
+}
+#a{
+    display: auto;
+}
+.btn{
+    background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  background: orange;
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 7px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+    </style>
+</head>
+
+<body>
+    <main>
+    <section class="bar">
+        <h1>Livre Ftech Plus</h1>
+        <div class="search-bar">
+          <input type="text" name="search" value="" autocomplete="off" id="myinput" onkeyup="searchFunction()" placeholder="Search (utiliser les accents si c'est nésseacaire)">
+        </div>
+      </section>
+   <ul id="wrapper">
+    <h1>Web et Blog en html et cms</h1>
+    <div class="horizontal_slider">
+        <div class="slider_container">
+           <center>
+            <li class="item">
+                <div  id="a">
+                    <img src="images/programmation.png"><br>
+                    <a href="#" class="h1">HTML & CSS</a>
+                    <p class="price"><em style="color: orangered;">Rm</em> 260</p>
+                    <div class="button"><a class="btn" onclick="window.location.href='details/programmation.html';">Télécharger </a></div>
+                </div>
+            </li> <!--html et css-->
+
+            <li class="item">
+                <div>
+                    <img src="images/commen_creer _blog.png"><br>
+                    <a href="#" class="h1">Créer un blog</a>
+                    <p class="price"><em style="color: orangered;">Rm</em> 200</p>
+                    <div class="button"><a class="btn" onclick="window.location.href='details/creerBlog.html';">Télécharger </a></div>
+                </div>
+            </li><!--creation blog avec blogger-->
+
+            <li class="item">
+                <div>
+                    <img src="images/ibi.png"><br>
+                    <a href="#" class="h1">SQL Server 2008</a>
+                    <p class="price"><span></span><em style="color: orangered;">Rm</em> 450</p>
+                    <div class="button"><a class="btn" onclick="window.location.href='details/bia.html';">Télécharger </a></div>
+                </div>
+            </li><!--sql server 2008-->
+           </center>
+        </div>
+    </div>
+    <h1>Astuces sur windows</h1>
+        <div class="horizontal_slider">
+            <div class="slider_container">
+                <center>
+                    <li class="item">
+                        <div  id="a">
+                            <img src="images/crack mot de pass.png"><br>
+                            <a href="#" class="h1">pass windows</a>
+                            <p class="price"><em style="color: orangered;">Rm</em> 200</p>
+                            <div class="button"><a class="btn" onclick="window.location.href='details/crackPass.html';">Télécharger </a></div>
+                        </div>
+                    </li> <!--html et css-->
+                    <li class="item">
+                        <div>
+                            <img src="images/utilisateur.JPG"><br>
+                            <a href="#" class="h1">Nom d'utilisateur</a>
+                            <p class="price"><em style="color: orangered;">Rm</em> 50</p>
+                            <div class="button"><a class="btn" onclick="window.location.href='details/utilisateur.html';">Télécharger </a></div>
+                        </div>
+                    </li><!--creation blog avec blogger-->
+                   </center>
+            </div>
+        </div>
+   </ul>
+</main>
+
+   <div class="navbar">
+    <a href="../home.html" class="active"><i class="material-icons">home</i></a>
+    <div class="espace" style="width: 100%;"></div>
+    <a href="#news"><i class="material-icons" style=" display:none; color: blue; font-weight: bold; padding: 2px; border: 1px solid;">navigate_before</i></a>
+    <a href="#contact"><i class="fas fa-home"></i></a>
+  </div>
+   <script>
+    function searchFunction() {
+        var input, filter, ul, li, a, i;
+        input = document.getElementById('myinput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById('wrapper');
+        li = ul.getElementsByTagName('li');
+
+        for(i=0 ; i< li.length; i++){
+            a = li[i].getElementsByTagName('a')[0];
+            if(a.innerHTML.toUpperCase().indexOf(filter) > -1){
+                li[i].style.display = "";
+            }
+
+            else{
+                li[i].style.display = 'none';
+                
+            }
+        }
+        }
+  </script>
+</body>
+
+</html>

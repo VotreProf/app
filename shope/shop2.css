@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500&display=swap');
+
+* {
+box-sizing: border-box;
+}
+
+#docs{
+  color: white;
+  font-size: 18px;
+  background-color: black;
+}
+#formpers{
+  display: none;
+}
+.formpers {
+background-color: #fff;
+border-radius: 5px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+overflow: hidden;
+height: 100vh;
+width: 400px;
+max-width: 100%;
+margin: 5px auto;
+border: 1px solid orange;
+}
+
+.pers {
+border-bottom: 1px solid #f0f0f0;
+background-color: gray;
+padding: 20px 40px;
+display: none;
+}
+
+.header h2 {
+margin: 0;
+}
+
+.f {
+padding: 10px 10px;	
+border: 1px solid blue;
+width: 95%;
+margin: auto;
+position: absolute;
+top: 20%;
+left: 0;
+right: 0;
+margin: auto
+}
+
+.form-control {
+margin-bottom: 10px;
+padding-bottom: 2px;
+position: relative;
+}
+
+.form-control label {
+display: inline-block;
+margin-bottom: 5px;
+}
+
+.form-control input {
+border: 2px solid blue;
+border-radius: 4px;
+display: block;
+font-family: inherit;
+font-size: 14px;
+padding: 10px;
+width: 100%;
+}
+
+.form-control input:focus {
+outline: 0;
+border-color: #777;
+}
+
+.form-control.success input {
+border-color: #2ecc71;
+}
+
+.form-control.error input {
+border-color: #e74c3c;
+}
+
+.form-control i {
+visibility: hidden;
+position: absolute;
+top: 40px;
+right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+color: #2ecc71;
+visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+color: #e74c3c;
+visibility: visible;
+}
+
+.f .form-control small {
+color: #e74c3c;
+position: absolute;
+bottom: 0;
+left: 0;
+visibility: hidden;
+}
+
+.f .form-control.error small {
+visibility: visible;
+}
+
+.f button {
+background-color: #0004ee;
+border: 2px solid #c7a900;
+border-radius: 4px;
+color: #fff;
+display: block;
+font-family: inherit;
+font-size: 16px;
+padding: 10px;
+margin-top: 2px;
+width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.floating-btn {
+  display: none;
+border-radius: 26.5px;
+background-color: #001F61;
+border: 1px solid #001F61;
+box-shadow: 0 16px 22px -17px #03153B;
+color: #fff;
+cursor: pointer;
+font-size: 16px;
+line-height: 20px;
+padding: 12px 20px;
+position: fixed;
+bottom: 3px;
+right: 15px;
+z-index: 999;
+}
+
+.floating-btn:hover {
+background-color: #ffffff;
+color: black;
+}
+
+.floating-btn:focus {
+outline: none;
+color: black;
+}
+
+.floating-text {
+background-color: #001F61;
+border-radius: 10px 10px 0 0;
+color: #fff;
+font-family: 'Muli';
+padding: 7px 15px;
+position: fixed;
+bottom: 0;
+left: 50%;
+transform: translateX(-50%);
+text-align: center;
+z-index: 998;
+}
+
+.floating-text a {
+color: #FF7500;
+text-decoration: none;
+}
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 5px 7px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #f1f1f1;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #0011ff;
+  color: white;
+}
+
+@media screen and (max-width: 480px) {
+
+.social-panel-container.visible {
+transform: translateX(0px);
+}
+
+.floating-btn {
+right: 10px;
+}
+}
