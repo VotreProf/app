@@ -80,7 +80,8 @@ main{
     color: red;
     margin: 15px;
 }
-#signup, #login{
+#signup{
+    display: none;
     width: 98%;
     margin: auto;
     background: white;
@@ -109,7 +110,7 @@ main{
     text-align: center;
 }
 
-input[type="text"], input[type="email"], input[type="number"], input[type="password"]{
+input[type="text"], input[type="email"], input[type="number"], input[type="date"]{
     padding: 10px;
     width: 100%;
     margin: auto;
@@ -117,7 +118,7 @@ input[type="text"], input[type="email"], input[type="number"], input[type="passw
     outline: none;
     border-bottom: 1px solid blue;
 }
-input[type="submit"]{
+#send{
     background: blue;
     width: 100%;
     border: none;
@@ -127,3 +128,84 @@ input[type="submit"]{
     font-size: 5vw;
     cursor: pointer;
 }
+#fermer{
+    background: red;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 5vw;
+    cursor: pointer;
+}
+select{
+    padding: 11.5px;
+    width: 100%;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+.select{
+    border: 1px solid red;
+    width: 50px;
+}
+#code{
+    background: black;
+    color: white;
+    padding: 10px;
+    width: 50px;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+
+#message{
+    width: 90%;
+    background: white;
+    box-shadow: 0px 0px  3px 1px black;
+    padding: 20px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  #message div{
+    align-items: center;
+    justify-content: center;
+  }
+  #message h1{
+    margin-top: 15px;
+    color: orangered;
+    text-align: center;
+  }
+
+  #message i{
+    font-size: 200px;
+    color: blue;
+  }
+  .close{
+    background: black;
+    height: 50px;
+    margin-top: -15px;
+  }
+  .close h1{
+    color: rgb(3, 3, 78);
+  }
+  #c{
+    box-shadow: 0px 0px 3px 1px blue;
+    width: 30px;
+    height: 30px;
+    top: 8%;
+    left: 30px;
+    cursor:pointer;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    color: red;
+    background: white;
+    padding: 3px;
+    position: absolute;
+  }
