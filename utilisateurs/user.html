@@ -35,10 +35,32 @@
         <h1>Télécharger le lan de la formation</h1>
       </div>
       <div id="module">
-        <a href="https://meet.google.com/cgb-tpmh-smd"><button>Participer dans la Reunion</button></a>
+        <p>
+          Cliquer sur le boutton pour copier le lien de la reunion et coller 
+          le dans votre navigateur pour suivre la reunion
+        </p>
           <a href="https://drive.google.com/uc?export=download&id=13W28vXjw6XbeEAWfYs680bK8S3ZjLksA" download="plan html et css en pdf">Telecharger le plan de la formation</a>
-      </div>
+          <input type="text" disabled value="https://meet.google.com/cgb-tpmh-smd" id="myInput">
+          <h3 id="copi"></h3>
+          <button onclick="myFunction()">Copier le lien de la Réunion</button>
 
+<script>
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  navigator.clipboard.writeText(copyText.value);
+  
+  /* Alert the copied text */
+  document.getElementById('copi').innerHTML = " le lien a été copié ";
+}
+</script>
+      </div>
       <div class="buttons">
         <button id="insert" style="display: none;">Insert</button>
         
