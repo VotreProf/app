@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD with Firebase</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2><span style="color: rgb(0, 4, 54);">Votre</span><span style="color: orangered;">Prof</span> : Vos infos</h2>
+      <hr />
+      <br />
+      <div class="form">
+        <select name="" id="roll" style="display: none;">
+          <option value="Dabone">Dabone</option>
+        </select>
+        <div>
+          <label for="">Participant: </label>
+          <input type="text" name="RollNo" id="name" />
+          <button id="read">Read</button>
+        </div>
+         <hr>
+        <ul id="capture">
+          <li>Nom :<span id="lname"></span></li>
+          <li>Email :<span id="email"></span></li>
+          <li>Numéro :<SPAN id="number"></SPAN></li>
+          <li>Date :<span id="date"></span></li>
+          <li>Sexe :<span id="sexe"></span></li>
+        </ul>
+      </div>
+      <div class="h">
+        <h1>Télécharger le lan de la formation</h1>
+      </div>
+      <div id="module">
+          <a href="plan html et css.pdf" download="plan html et css en pdf">Telecharger le plan de la formation</a>
+      </div>
+
+      <div class="buttons">
+        <button id="insert" style="display: none;">Insert</button>
+        
+        <button id="update" style="display: none;">Update</button>
+        <button id="delete" style="display: none;">Delete</button>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.4.2/firebase.js"></script>
+
+    <script src="./fireConfig.js"></script>
+  </body>
+</html>
