@@ -24,13 +24,13 @@ var firebaseConfig = {
   
     firebase
       .database()
-      .ref("Formation html&css/" + nameV)
+      .ref("Formation html&css/utilisateurs details/" + nameV)
       .on("value", function (snap) {
-        document.getElementById("lname").innerHTML = snap.val().ANAME;
+        document.getElementById("lname").innerHTML = snap.val().Nom;
         document.getElementById("email").innerHTML = snap.val().Email;
-        document.getElementById("number").innerHTML = snap.val().NUMBER;
-        document.getElementById("date").innerHTML = snap.val().DATE;
-        document.getElementById("sexe").innerHTML = snap.val().SEXE;
+        document.getElementById("number").innerHTML = snap.val().Numero;
+        document.getElementById("date").innerHTML = snap.val().Date;
+        document.getElementById("note").innerHTML = snap.val().Note;
         document.getElementById('module').style.display = 'block';
       });
   };
