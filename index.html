@@ -6,26 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
-
+<body id="body" onload="loadbody();">
+ 
     <header>
        <button class="menu"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></button>
         <h1>SI-TECH</h1>
+        <div class="rm"><span >Rm : </span> <span id="rm"> 000000</span></div>
     </header>
     <!--Le sidebar de mon application-->
     <section id="mySidenav" class="side">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <div class="close"><div  onclick="closeNav()"><p onclick="closeNav()"> </p></div></div>
         <ul>
-            <li><a href="#">Accueil</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Clients</a></li>
-            <li><a href="#">Contact</a></li>
+            <li style="border: none;"><span>Nom: </span><span  id="username"></span></li>
+            <li style="border: none;"><span>Email : </span><span  id="useremail"></span></li>
+            <div class="hr" ></div>
+            <li><i class="fas fa-home"></i><a href="#" onclick="closeNav()">Accueil</a></li>
+            <li><i class="fas fa-server"></i><a href="#" onclick="closeNav()">Services</a></li>
+            <li><i class="far fa-question-circle"></i>
+              <a href="#" onclick="closeNav()">A propos</a></li>
+            <li><i class="far fa-window-close"></i><a onclick="logout()" >Se deconecter</a></li>
         </ul>
     </section>
-
+    <!--page d'entree de l'application qui contien les video-->
     <section id="splash" class="filterDiv splash">
         <section>
             <figure id="video_player">
@@ -87,7 +94,22 @@
     <!--le home de mon application-->
     <main id="home">
         <section class="home-header">
-            <img src="images/back.jpg" alt="">
+          <div class="date-time">
+            <h2>Bienvenue <span  id="username"></span></h2>
+            <h2></h2>
+            <div class="bar-conect" id="conect-btn">
+              <a class="btnsignup" href="public/index.html">
+                <i class="fas fa-users"></i> Enregistrer
+            </a>
+            <a class="btnlogin" href="public/login.html">
+                <i class="fas fa-sign-in-alt"></i> Connecter
+            </a>
+            </div>
+            <span id="date">date</span>
+            <span id="month">month</span>
+            <span id="year">year</span>
+            <span id="weekday">weekday</span>
+        </div><br>
         </section>
         <section id="noti">
           <div id="subheader">
@@ -98,7 +120,54 @@
             <img src="images/logo.png" alt="" />
           </div>
         </section>
-        <section>
+
+        <section id="produitLivre">
+          <div class="title">
+            <div class="espace"></div>
+            <h1>Document en pdf sur android</h1>
+            <div class="espace"></div>
+          </div>
+          <div class="produit">
+            <div class="produit-item">
+              <a href="pages/creer_blog.html">
+                <div class="livre">
+                  <img src="/images/commen_creer _blog.png" alt="Comment creer un blog">
+                </div>
+                <div class="des">
+                  <p><span>Rm</span> <span id="prix">200</span></p>
+                </div>
+              </a>
+            </div>
+           
+          <div class="produit-item">
+            <a href="shope/details/crackPass.html">
+              <div class="livre">
+                <img src="images/crack mot de pass.png" alt="cracker un mot de pass windows">
+              </div>
+              <div class="des">
+                <p><span>Rm</span> <span id="prix">200</span></p>
+              </div>
+            </a>
+          </div>
+
+            <div class="produit-item">
+              <a href="shope/details/lien.html">
+                <div class="livre">
+                  <img src="images/programmation.png" alt="Comment monetizer un lien">
+                </div>
+                <div class="des">
+                  <p><span>Rm</span> <span id="prix">200</span></p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="document">
+
+        </section>
+
+        <section style="display: none;">
           <div class="card">
             <div><img src="images/formation-methode.png" alt="Denim Jeans"></div>
             <h1>cours html et css</h1>
@@ -163,6 +232,34 @@
         </div>
     </footer>
     <script src="index.js"></script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use -->
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+  
+      <script>
+          var firebaseConfig = {
+              apiKey: "AIzaSyAwnrdMHIkFmAPHHOJhWRL-Tz0hSniCGcY",
+              authDomain: "votreprof-e3009.firebaseapp.com",
+              databaseURL: "https://votreprof-e3009-default-rtdb.firebaseio.com",
+              projectId: "votreprof-e3009",
+              storageBucket: "votreprof-e3009.appspot.com",
+              messagingSenderId: "1044359996340",
+              appId: "1:1044359996340:web:179fc5a911ef0d9a71c8e1",
+              measurementId: "G-LGH5WBR6G7"
+          };
+  
+          firebase.initializeApp(firebaseConfig);
+  
+          const auth = firebase.auth();
+          const fs = firebase.firestore();
+          const db = firebase.database();
+      </script>
+  
+      <script src="public/users.js"></script>
     <script>
         function openNav() {
           document.getElementById("mySidenav").style.width = "250px";
