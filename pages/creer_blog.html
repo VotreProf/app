@@ -12,28 +12,6 @@
 </head>
 <body id="body" onload="loadbody();">
  
-    <header>
-       <button class="menu"><span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span></button>
-        <h1>SI-TECH</h1>
-        <div class="rm"><span >Rm : </span> <span id="rm"> 000000</span></div>
-    </header>
-    <!--Le sidebar de mon application-->
-    <section id="mySidenav" class="side">
-
-        <div class="close"><div  onclick="closeNav()"><p onclick="closeNav()"> </p></div></div>
-        <ul>
-            <li style="border: none;"><span>Nom: </span><span  id="username"></span></li>
-            <li style="border: none;"><span>Email : </span><span  id="useremail"></span></li>
-            <div class="hr" ></div>
-            <li><i class="fas fa-home"></i><a href="#" onclick="closeNav()">Accueil</a></li>
-            <li><i class="fas fa-server"></i><a href="#" onclick="closeNav()">Services</a></li>
-            <li><i class="far fa-question-circle"></i>
-              <a href="#" onclick="closeNav()">A propos</a></li>
-            <li><i class="far fa-window-close"></i><a onclick="logout()" >Se deconecter</a></li>
-        </ul>
-    </section>
-  
-
     <!--lformulaire downloadde mon application-->
     <main id="home">
         <section class="produit">
@@ -115,35 +93,8 @@
       
       </section>
       </main><!--formulaire downloadde mon application-->
-
-    <!--le pied de la page de mon application-->
-    <footer>
-        <div class="share-btn-container">
-            <a href="#" class="facebook-btn" style="display: none;">
-            <i class="fab fa-facebook" style="color: rgb(2, 110, 252);"></i>
-            </a>
-            
-            <a href="#" class="twitter-btn" style="display: none;">
-            <i class="fab fa-twitter" style="color: rgb(0, 183, 255);"></i>
-            </a>
-            
-            <a href="/index.html"  class="whatsap" >
-                <i class="fa fa-home" id="homeBtn" style="color: rgb(250, 58, 0);"></i>
-            </a>
-            
-            <a href="#" class="whatsapp-btn">
-            <i class="fab fa-whatsapp" style="color: rgb(3, 134, 25);"></i>
-            Partager sur whatsap
-            </a>
-            
-            <a href="#" class="whatsapp-btn" onclick="video()" style="display: none;">
-                <i class="fa fa-video" style="color: red;"></i>
-                </a>
-
-            <img class="pinterest-img" src="" alt=""/>
-        </div>
-    </footer>
     <script src="index.js"></script>
+    <script src="page.js"></script>
       <!-- The core Firebase JS SDK is always required and must be listed first -->
       <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
 
