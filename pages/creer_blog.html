@@ -52,7 +52,7 @@
                   <li><strong>Disponible :</strong>Android et Pc</li>
                   
                 </ul>
-                <a href="https://drive.google.com/uc?export=download&id=1Qf5ul7eGLmcOq0asOUscbrzE5wR7ZZM3" id="lien" download="Comment créer votre blog"></a>
+                <a href="http://gestyy.com/eay2vc" id="lien" download="Comment créer votre blog"></a>
               </div>
               <center><button onclick="openForm()">Télécharger ce produit</button></center>
         </section>
@@ -151,89 +151,5 @@
       <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
       <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
-  
-      <script>
-          var firebaseConfig = {
-              apiKey: "AIzaSyAwnrdMHIkFmAPHHOJhWRL-Tz0hSniCGcY",
-              authDomain: "votreprof-e3009.firebaseapp.com",
-              databaseURL: "https://votreprof-e3009-default-rtdb.firebaseio.com",
-              projectId: "votreprof-e3009",
-              storageBucket: "votreprof-e3009.appspot.com",
-              messagingSenderId: "1044359996340",
-              appId: "1:1044359996340:web:179fc5a911ef0d9a71c8e1",
-              measurementId: "G-LGH5WBR6G7"
-          };
-  
-          firebase.initializeApp(firebaseConfig);
-  
-          const auth = firebase.auth();
-          const fs = firebase.firestore();
-          const db = firebase.database();
-      </script>
-  
-      <script src="/public/users.js"></script>
-      <script src="page.js"></script>
-    <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "250px";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
-        </script>
-
-
-
-<script>
-  /* 
-
-Social Share Links:
-
-WhatsApp:
-https://wa.me/?text=[post-title] [post-url]
-
-Facebook:
-https://www.facebook.com/sharer.php?u=[post-url]
-
-Twitter:
-https://twitter.com/share?url=[post-url]&text=[post-title]
-
-Pinterest:
-https://pinterest.com/pin/create/bookmarklet/?media=[post-img]&url=[post-url]&is_video=[is_video]&description=[post-title]
-
-LinkedIn:
-https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]
-
-*/
-
-const facebookBtn = document.querySelector(".facebook-btn");
-const twitterBtn = document.querySelector(".twitter-btn");
-const whatsappBtn = document.querySelector(".whatsapp-btn");
-let titre = document.getElementById('titre');
-function init() {
-
-let postUrl = encodeURI( "https://play.google.com/store/apps/details?id=com.sitech.sitech");
-let postTitle = encodeURI("Voici un document important \nComment créer un blog gratuit\n Vous pouvez le télécharger gratuitement ici\n" );
-
-
-facebookBtn.setAttribute(
-"href",
-`https://www.facebook.com/sharer.php?u=${postUrl}`
-);
-
-twitterBtn.setAttribute(
-"href",
-`https://twitter.com/share?url=${postUrl}&text=${postTitle}`
-);
-
-
-whatsappBtn.setAttribute(
-"href",
-`https://wa.me/?text=${postTitle} ${postUrl}`
-);
-}
-init();
-</script>
 </body>
 </html>
