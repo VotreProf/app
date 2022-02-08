@@ -1,0 +1,183 @@
+@media screen and (max-width: 800px){
+  *{
+      background: white;
+  }
+
+
+  #form{
+      display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+      background: white;
+     box-shadow: 0px 0px 3px 0px black;
+      width: 90%;
+  }
+  .form{
+      border: 1px solid red;
+      margin: 4px;
+  }
+
+  h1{
+      background: blue;
+      padding: 10px;
+      color: white;
+      text-align: center;
+      margin-top: 0px;
+      margin-bottom: 0px;
+  }
+
+  .prix{
+      margin-top: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .prix p{
+      justify-content: center;
+      align-items: center;
+      font-family:  'Arial Narrow Bold', sans-serif;
+      width: 100%;
+      background: orangered;
+      color: white;
+      height: 30px;
+      font-size: 5vw;
+      text-align: center;
+      padding: 5px;
+  }
+  .prix #prix{
+      width: 100%;
+    background: orangered;
+    color: white;
+    height: 30px;
+    font-size: 5vw;
+    text-align: center;
+    padding: 5px;
+    margin-top: 0px;
+}
+hr{
+    height: 5px;
+    background: lime;
+    margin: 0px;
+}
+ #msg{
+     margin-top: 0px;
+     background: blue;
+     padding: 10px;
+     font-size: 5vw;
+     color: white;
+ }
+
+ .balance{
+     display: flex;
+     width: 100%;
+ }
+#p .fa{
+    color: blue;
+    font-size: 6vw;
+    padding: 1px;
+    margin: 0px;
+}
+#b .fa{
+    color: blue;
+    font-size: 6vw;
+    padding: 1px;
+    margin: 0px;
+}
+
+  #form input[type=password]{
+    padding: 10px;
+    margin: 0px 3px 0px 3px;
+    width: 100%;
+    box-shadow: 0px 0px 0px 1px black;
+    border: none;
+    outline: none;
+}
+#p{
+    display: none;
+}
+
+.result{
+    display: flex;
+    width: 100%;
+    box-shadow: 0px 0px 0px 1px black;
+}
+#form input[type=montant]{
+    text-align: center;
+    font-size: 5vw;
+    color: red;
+    font-weight: bolder;
+    padding: 1px;
+    margin: 0px 3px 0px 3px;
+    width: 100%;
+    box-shadow: 0px 0px 0px 1px black;
+    border: none;
+    outline: none;
+}
+#payer{
+    width: 100%;
+}
+#myProgress{
+    width: 100%;
+    border: 1px solid gray;
+    height: 20px;
+    margin-top: -20px;
+    margin-bottom: 4px;
+    align-items:flex-start;
+}
+#myProgress #myBar{
+    align-items: left;
+    background: orangered;
+    width: 1%;
+    height: 19px;
+}
+
+.icon-bar{
+    background: gray;
+    padding: 2px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 2px;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .icon-bar i{
+      background: none;
+      color: none;
+  }
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+
+.icon-bar .fa-facebook {
+    color: #3B5998;
+  }
+  
+  .icon-bar .fa-twitter {
+    color: #55ACEE;
+  }
+  
+ .icon-bar .fa-google {
+    color: #dd4b39;
+  }
+  
+  .icon-bar .fa-linkedin {
+    color: #007bb5;
+  }
+  
+  .icon-bar .youtube {
+    background: #bb0000;
+    color: white;
+  }
+}
