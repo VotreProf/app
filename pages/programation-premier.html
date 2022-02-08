@@ -5,17 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../index.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+    <script src='https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js'></script>
     <link rel="stylesheet" href="page.css">
+    <link rel="stylesheet" href="/css/paimentform.css">
 </head>
 <body id="body" onload="loadbody();">
     <!--lformulaire downloadde mon application-->
     <main id="home">
         <section class="produit">
               <div class="livre">
-                  <center><img src="/images/commen_creer _blog.png" alt=""></center>
+                  <center><img src="/images/programmation.png" alt=""></center>
               </div>
               <div>
                 <h2 id="titre">Programmation html et css su android</h2><hr>
@@ -29,78 +33,53 @@
                   <li><strong>Disponible :</strong>Android et Pc</li>
                   
                 </ul>
-                <a href="http://gestyy.com/eay2ne" id="lien" download="Programation web en html ert css, niveau 1"></a>
+                <a href="https://drive.google.com/uc?export=download&id=1IpKP2oAnlWnb9p-Bqqzp3QcOVAspKk92" id="lien" download="Programation web en html ert css, niveau 1"></a>
               </div>
               <center><button onclick="openForm()">Télécharger ce produit</button></center>
         </section>
-      <section class="form-data" id="form-data">
-        <button class="close-form"  onclick="closeForm()"><i class="fas fa-times" style="color: rgb(252, 0, 0);"></i></button>
-        <form name="google-sheet">
-          <div class="title">
-            <h1>Remplir le formulaire pour télécharger gratuitement</h1>
-          </div><hr>
-          <div id="form_alerts"></div>
-          <div class="groupe">
-            <select style="display: none;">
-              <option></option>
-              <option value="+229">Benin (+229)</option>
-              <option value="+257">Burundi (+257)</option>
-              <option value="+226">Burkina Faso (+226)</option>
-              <option value="+237">Cameroon (+237)</option>
-              <option value="+1">Canada (+1)</option>
-              <option value="+238">Cape Verde (+238)</option>
-              <option value="+236">Central African Republic (+236)</option>
-              <option value="+242">Congo (+242)</option>
-              <option value="+242">Congo, the Democratic Republic of the (+242)</option>
-              <option value="+225">Cote D'Ivoire (+225)</option>
-              <option value="+1809">Dominican Republic (+1809)</option>
-              <option value="+298">Faroe Islands (+298)</option>
-              <option value="+594">French Guiana (+594)</option>
-              <option value="+509">Haiti (+509)</option>
-              <option value="+352">Luxembourg (+352)</option>
-              <option value="+853">Macao (+853)</option>
-              <option value="+389">Macedonia, the Former Yugoslav Republic of (+389)</option>
-              <option value="+261">Madagascar (+261)</option>
-              <option value="+223">Mali (+223)</option>
-              <option value="+377">Monaco (+377)</option>
-              <option value="+227">Niger (+227)</option>
-              <option value="+234">Nigeria (+234)</option>
-              <option value="+262">Reunion (+262)</option>
-              <option value="+250">Rwanda (+250)</option>
-              <option value="+268">Swaziland (+268)</option>
-              <option value="+228">Togo (+228)</option>
-              <option value="+690">Tokelau (+690)</option>
-              <option value="+676">Tonga (+676)</option>
-              <option value="+260">Zambia (+260)</option>
-              <option value="+263">Zimbabwe (+263)</option>
-          </select>
-              <label for="name" class="form-label" id="span">Name</label>
-              <input type="text" id="number" name="name" class="form-control" placeholder="Enter your name" >
-              <span id="valid"><img src="/icons/valid.png" alt=""></span><span id="invalid"><img src="/icons/invalid.png" alt=""></span>
+        <section id="form"> <!--FORMULAIRE DE MAIMENT-->
+          <div class="form" >
+              <center>
+                  <h1>Programmation sur android </h1>
+                <div class="prix">
+                  <p>Payer</p><input id="prix" value="400" disabled><p>Rm</p>
+                </div>
+                <hr/>
+                <p id="msg">
+                  Bienvnue , Entrer votre pin
+                </p>
+                <div id="myProgress">
+                  <div id="myBar"></div>
+              </div>
+                <div id="b">
+                    <div class="balance">
+                        <button><i class="fa fa-credit-card" aria-hidden="true"></i></button>
+                      <input type="password" class="input"  id="number" placeholder="Entrer votre pin ici">
+                      <button id="select" class="w3-btn w3-blue"><i class="fa fa-send" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                  
+                  <div id="p">
+                    <div class="result">
+                      <button><i class="fa fa-credit-card" aria-hidden="true"></i></button>
+                      <input type="montant" id="montant" disabled>
+                      <button style="color: blue; font-weight: bold;">RM disponible</button>
+                      <button type="submit" id="payer" class="w3-btn w3-blue"><i class="fa fa-send" aria-hidden="true"></i></button>
+                    </div>
+                  </div>
+                  <div class="icon-bar">
+                      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+                      <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+                      <a href="#" class="google"><i class="fa fa-google"></i></a> 
+                      <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+                      <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+                    </div>
+              </center>
           </div>
-          <div class="groupe">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" >
-              <span id="valid1"><img src="/icons/valid.png" alt=""></span><span id="invalid1"><img src="/icons/invalid.png" alt=""></span>
-              <span></span>
-          </div>
-          <div id="bouton">
-              <button class="btn btn-primary me-2" type="submit">,Télécharger</button>
-          </div>
-          
-      </form>
-      
-      </section>
+        </section> <!--section de paiment-->
       </main><!--formulaire downloadde mon application-->
 
     <script src="index.js"></script>
-    <script src="page.js"></script>
-      <!-- The core Firebase JS SDK is always required and must be listed first -->
-      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
-
-      <!-- TODO: Add SDKs for Firebase products that you want to use -->
-      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-auth.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-firestore.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+      <script src="../js/shope.js"></script>
 </body>
 </html>
